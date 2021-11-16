@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel = "icon" href = "./images/logo.png" type = "image/x-icon"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Emoji For HTML</title>
+</head>
+<body>
+    <div class="body__list">
+        <script>
+            for(let i=129293; i<=129535; i++) {
+                let emoji = String.fromCodePoint(i);
+                output = `
+                    <div class="emoji">
+                        <div class="emoji-inner" style="display: flex">
+                            <div class="emoji-code">
+                                ${emoji}
+                            </div>
+                            <div class="emoji-char">
+                                &#$${i}
+                            </div>
+                            <i class="far fa-copy"></i>
+                        </div>
+                    </div>
+                `
+                document.write(output);
+                console.log(emoji, i);
+            }
+    
+            let code = '😁'.codePointAt(0)
+            console.log(`&#${code}`);
+        </script>
+    </div>
+</body>
+</html>
